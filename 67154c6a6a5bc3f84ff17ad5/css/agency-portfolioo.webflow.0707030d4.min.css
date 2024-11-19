@@ -10558,3 +10558,25 @@ blockquote {
 .pluspx {
   max-width: 30px;
 }
+
+.f-column {
+  flex-direction: column !important;
+}
+.m-in-auto {
+  margin: 0 auto
+}
+.p-in-0 {
+  padding-inline: 0 !important;
+}
+.m-in-0 {
+  margin-inline: 0 !important;
+}
+.w-100 {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

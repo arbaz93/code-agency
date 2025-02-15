@@ -21,3 +21,41 @@
 .primary-text {
     color: var(--primary);
 }
+.relative {
+  position: relative;
+}
+.sub-services {
+  position: absolute;
+  top: 150px; 
+  left:0;
+  border-radius: 16px;
+  overflow-y: hidden;
+  width: 100%;
+  max-height: max-content;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 10;
+  display: none;
+}
+.sub-services[data-show=true] {
+  display: initial;
+}
+.sub-services > .service-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  gap: 1rem;
+  
+  padding: 1rem;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+.sub-services > .service-items .items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sub-services > .service-items .items .sub-items {
+  font-size: .8rem;
+}
+.sub-services > .service-items .service-heading h4 {
+  font-size: 1.4rem;
+}

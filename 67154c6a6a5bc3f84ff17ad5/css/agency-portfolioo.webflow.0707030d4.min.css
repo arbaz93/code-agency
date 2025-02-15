@@ -3920,10 +3920,21 @@ blockquote {
 
 .site-logo {
   object-fit: contain;
-  max-width: 170px;
-  max-height: 40px
+  width: 150px;
+  animation-timeline: scroll();
+  animation-name: logoSize;
+  animation-duration: 200ms;
+  animation-range: 80vh 100vh;
+  animation-fill-mode: forwards;
 }
-
+@keyframes logoSize {
+  from {
+    width: 150px;
+  }
+  to {
+    width: 100px;
+  }
+}
 .heading {
   margin-top: 0;
   margin-bottom: 0
@@ -7723,17 +7734,27 @@ blockquote {
 
 .navbar {
   z-index: 99;
-  box-shadow: 0 15px 40px 0 var(--box-shadow);
-  background-color: #fff;
+  /* box-shadow: 0 15px 40px 0 var(--box-shadow); */
+  background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 23px 0;
   position: sticky;
-  top: 0
+  top: 0;
+  animation-timeline: scroll();
+  animation-name: bgFadeIn;
+  animation-duration: 200ms;
+  animation-range: 60vh 100vh;
+  animation-fill-mode: forwards;
+
 }
 
+@keyframes bgFadeIn {
+  to {
+  background-color: rgba(255, 255, 255, 1);
+  }
+}
 ._20px-text-white {
   color: #fff;
   margin-top: 0;
@@ -7771,7 +7792,7 @@ blockquote {
   grid-row-gap: 30px;
   flex-flow: row;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr .25fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-content: space-between;
   align-items: center;
@@ -8019,7 +8040,7 @@ blockquote {
 .deskop-nav {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   display: flex
 }

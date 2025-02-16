@@ -26,7 +26,17 @@
 .relative {
   position: relative;
 }
-
+.services-nav-link {
+  display: flex;
+  gap: .4rem;
+}
+.service-arrow {
+  transition: transform 200ms linear;
+  width: .6rem;
+}
+.service-arrow[data-show='true'] {
+  transform: rotate(-180deg);
+}
 .sub-services {
   position: absolute;
   top: 150px;
@@ -57,9 +67,11 @@
   0% {
     display: initial !important;
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

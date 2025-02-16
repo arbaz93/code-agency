@@ -3921,20 +3921,13 @@ blockquote {
 .site-logo {
   object-fit: contain;
   width: 150px;
-  animation-timeline: scroll();
-  animation-name: logoSize;
-  animation-duration: 200ms;
-  animation-range: 80vh 100vh;
-  animation-fill-mode: forwards;
+  transition: width 400ms ease-in;
+
 }
-@keyframes logoSize {
-  from {
-    width: 150px;
-  }
-  to {
-    width: 100px;
-  }
+.site-logo[data-small=true] {
+  width: 100px;
 }
+
 .heading {
   margin-top: 0;
   margin-bottom: 0
@@ -7742,19 +7735,13 @@ blockquote {
   margin-right: auto;
   position: sticky;
   top: 0;
-  animation-timeline: scroll();
-  animation-name: bgFadeIn;
-  animation-duration: 200ms;
-  animation-range: 60vh 100vh;
-  animation-fill-mode: forwards;
-
+  transition: background-color 400ms ease-in;
 }
-
-@keyframes bgFadeIn {
-  to {
+.navbar[data-small=true] {
   background-color: rgba(255, 255, 255, 1);
-  }
+
 }
+
 ._20px-text-white {
   color: #fff;
   margin-top: 0;

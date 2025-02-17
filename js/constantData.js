@@ -54,10 +54,6 @@ phone_2?.forEach(phone => {
 })
 
 
-submissionFormElements.forEach(form => {
-    console.log(form)
-})
-
 if(window.location.pathname == '/contact.html') {
     const contactFormElements = document.querySelectorAll('wf-form-contact');
     // Add email function here

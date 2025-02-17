@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.onload = () => {
     const preloader = document.querySelector('.preloader');
-    // preloader.setAttribute('data-visible', false);
+    preloader.setAttribute('data-visible', false);
 
 }

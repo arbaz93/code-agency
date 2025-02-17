@@ -3920,12 +3920,13 @@ blockquote {
 
 .site-logo {
   object-fit: contain;
-  width: 150px;
+  width: 50px;
   transition: width 400ms ease-in;
+  padding: 1rem 0;
 
 }
 .site-logo[data-small=true] {
-  width: 100px;
+  width: 30px;
 }
 
 .heading {
@@ -9219,8 +9220,7 @@ blockquote {
 
   .navbar {
     margin-top: 0;
-    padding-top: 20px;
-    padding-bottom: 20px
+    padding-block: 1rem;
   }
 
   .navbar-wrapper {
@@ -9757,10 +9757,11 @@ blockquote {
 
   .navbar {
     max-width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px
+    padding-block: 1rem;
   }
-
+  .site-logo {
+    padding: 0;
+  }
   ._30px-text-white {
     font-size: 28px;
     line-height: 140%

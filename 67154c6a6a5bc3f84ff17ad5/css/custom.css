@@ -18,7 +18,19 @@
   --extra-color: #f8f8f8;
   --fonts--icons: "Material Icons", sans-serif
 }
+body {
+  background-image: url('../../img/blob4.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 50vw;
+}
+@media (max-width: 769px) {
+  body {
+  background-size: 80vw;
 
+  }
+  
+}
 .primary-text {
   color: var(--primary);
 }

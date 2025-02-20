@@ -3921,7 +3921,7 @@ blockquote {
 .site-logo {
   object-fit: contain;
   width: 50px;
-  transition: width 400ms ease-in;
+  transition: width 200ms ease-in;
   padding: 1rem 0;
 
 }
@@ -7740,6 +7740,7 @@ blockquote {
 }
 .navbar[data-small=true] {
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
 

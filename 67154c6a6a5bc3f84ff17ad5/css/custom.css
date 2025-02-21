@@ -19,7 +19,7 @@
   --fonts--icons: "Material Icons", sans-serif
 }
 body {
-  background-image: url('../../img/blob4.svg');
+  /* background-image: url('../../img/blob4.svg'); */
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 50vw;

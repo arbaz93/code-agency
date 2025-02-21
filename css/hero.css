@@ -28,8 +28,40 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    gap: 1rem;
 }
-.hero-content {
+@media screen and (max-width: 767px) {
+    .hero-container {
+        display: grid;
+        grid-template-areas: 
+        'heading social'
+        'description description';
+        gap: 0;
+
+    }
+    .hero-container div:nth-child(1) {
+        grid-area: heading;
+    }
+    .hero-container div:nth-child(2) {
+        grid-area: description;
+    }
+    .hero-container div:nth-child(3) {
+        grid-area: social;
+    }
+    }
+    
+.hero-center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.hero-center-content .hero-center1 h3 {
+    font-size: 1rem;
+}
+.hero-center-content .hero-center2 h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 .hero-heading h1 {
     max-width: 10ch;
@@ -39,7 +71,8 @@
     max-width: 50ch;
 }
 .hero-social {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: .6rem;
 }
 .hero-social-icon {
@@ -73,6 +106,24 @@
     height: 1rem;
 }
 
+.hero-quote {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    position: relative;
+}
+
+.hero-quote svg {
+    width: .6rem;
+    fill: var(--primary);
+    transform: rotate(90deg);
+    transition: transform 200ms ease;
+}
+.hero-quote:hover svg {
+    transform: rotate(45deg);
+}
+
+
 
 /* Gradient BG */
 :root {
@@ -89,7 +140,7 @@
     width: 100vw;
     height: 100vh;
 
-    filter:  blur(10px);
+    filter: blur(40px);
     filter: url(#goo) blur(40px);
     
     top: 0;

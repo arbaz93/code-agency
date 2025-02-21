@@ -159,7 +159,7 @@
     border-radius: 50%;
     
     top: calc(50% - 40vh);
-    left: calc(50% + 8vw);
+    left: calc(50% - 4vw);
 
     /* transform-origin: center center;
     animation: moveVertical 30s ease infinite; */
@@ -180,7 +180,7 @@
     border-radius: 50%;
     
     top: calc(50% - 20vh);
-    left: calc(50% + 8vw);
+    left: calc(50% - 4vw);
 
     transform-origin: calc(50% - 200px);
     animation: moveVertical 40s ease infinite;
@@ -198,7 +198,7 @@
     border-radius: 50%;
     
     top: calc(50% - 26vh);
-    left: calc(50% - 4vw);
+    left: calc(50% - 12vw);
 
     transform-origin: calc(50% - 200px);
     animation: moveHorizontal 30s ease infinite;

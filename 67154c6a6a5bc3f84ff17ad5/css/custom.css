@@ -47,13 +47,14 @@ body {
   bottom: 1.4rem;
 
   background-color: var(--white);
-  border: 2px solid black;
+  border: 1px solid black;
 
   padding: .8rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: border-color 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 
+  opacity: .6;
   z-index: 10;
 }
 .to-top-btn::before {
@@ -73,7 +74,8 @@ body {
   transform: scale(1);
 }
 .to-top-btn:hover {
-  border-color: var(--primary)
+  border-color: var(--primary);
+  opacity: 1;
 }
 .to-top-btn:hover svg {
   fill: var(--white);

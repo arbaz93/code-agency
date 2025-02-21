@@ -89,12 +89,16 @@
     width: 100vw;
     height: 100vh;
 
-    filter: blur(10px);
+    filter:  blur(10px);
+    filter: url(#goo) blur(40px);
     
     top: 0;
     left: 0;
 
     z-index: -999;
+}
+.gradient-bg svg {
+    display: none;
 }
 .gradient-bg .g1 {
     position: absolute;

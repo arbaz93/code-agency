@@ -19,6 +19,10 @@
     --fonts--icons: "Material Icons", sans-serif
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .hero-section {
     display: flex;
     justify-content: center;
@@ -37,28 +41,23 @@
     gap: 1rem;
 }
 
-.hero-container > div:nth-child(1) {
+.hero-container>div:nth-child(1) {
     grid-area: heading;
     align-self: end;
 }
 
-.hero-container > div:nth-child(2) {
+.hero-container>div:nth-child(2) {
     grid-area: description;
     align-self: start;
 }
 
-.hero-container > div:nth-child(3) {
+.hero-container>div:nth-child(3) {
     grid-area: social;
 }
 
 @media screen and (max-width: 767px) {
     .hero-container {
-        display: grid;
-        grid-template-areas:
-            'heading social'
-            'description description';
-        gap: 0;
-
+        column-gap: .4rem
     }
 }
 
@@ -80,9 +79,13 @@
 }
 
 .hero-heading h2 {
-    line-height: 100px;
+    line-height: 1.2;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-heading h2 {}
 }
 
 .hero-description {
@@ -133,26 +136,45 @@
     width: 1rem;
     height: 1rem;
 }
+
 .hero-social-follow {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 2rem;
-    margin-right: .2rem
+    margin-right: .2rem;
+    height: 120px;
 }
+
 .hero-social-follow svg {
     width: .8rem;
     opacity: .8;
+    transform: scaleY(1.6)
 }
-.hero-social-follow p {
+
+.hero-social-follow .vertical-text {
     position: absolute;
-    top: 100%;
+    top: 3.2rem;
     width: max-content;
     font-weight: 800;
-    transform: rotate(-90deg) translateX(-2rem);
+
+    display: inline-block;
+    transform: rotate(-90deg);
+    /* Default fallback */
+    transform-origin: center;
+    white-space: nowrap;
 }
+
+@supports (writing-mode: vertical-rl) {
+    .hero-social-follow .vertical-text {
+        /* writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: none; */
+    }
+}
+
 .hero-quote {
     display: flex;
     align-items: center;
@@ -193,7 +215,7 @@
     filter: blur(40px);
     filter: url(#goo) blur(40px);
 
-    top: 0;
+    top: 2rem;
     left: 0;
 
     z-index: -999;
@@ -236,7 +258,7 @@
     left: calc(50% - 12vw);
 
     transform-origin: calc(50% - 200px);
-    animation: moveVertical 40s ease infinite;
+    animation: moveVertical 5s ease infinite;
 
     width: var(--circle-size);
     height: var(--circle-size);
@@ -255,7 +277,7 @@
     left: calc(50% - 20vw);
 
     transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 30s ease infinite;
+    animation: moveHorizontal 10s ease infinite;
 
     width: var(--circle-size);
     height: var(--circle-size);
@@ -285,6 +307,14 @@
 
 }
 
+@media screen and (max-width: 767px) {
+    .gradient-bg {
+        top: -24rem;
+        left: 0;
+
+    }
+
+}
 
 @keyframes moveInCircle {
     0% {

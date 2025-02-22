@@ -64,16 +64,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    gap: 1rem;
 }
 
 .hero-center-content .hero-center1 h3 {
     font-size: 1rem;
+    margin: 0;
 }
 
 .hero-center-content .hero-center2 h3 {
     font-size: 1.2rem;
     font-weight: 500;
+    margin: 0;
 }
 
 .hero-heading h1 {

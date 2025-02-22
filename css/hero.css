@@ -95,6 +95,7 @@
     align-items: flex-end;
 
     gap: .6rem;
+    margin-bottom: 200px;
 
 }
 
@@ -132,7 +133,26 @@
     width: 1rem;
     height: 1rem;
 }
-
+.hero-social-follow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-right: .2rem
+}
+.hero-social-follow svg {
+    width: .8rem;
+    opacity: .8;
+}
+.hero-social-follow p {
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    font-weight: 800;
+    transform: rotate(-90deg) translateX(-2rem);
+}
 .hero-quote {
     display: flex;
     align-items: center;

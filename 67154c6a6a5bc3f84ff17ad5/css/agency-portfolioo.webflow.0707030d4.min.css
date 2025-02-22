@@ -5122,7 +5122,7 @@ blockquote {
 .image-card {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  background-color: var(--secondary);
+  background-color: var(--extra-color);
   flex-flow: column;
   width: 100%;
   padding: 17px;

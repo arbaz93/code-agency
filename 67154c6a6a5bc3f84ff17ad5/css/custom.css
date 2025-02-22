@@ -168,3 +168,13 @@ body {
 .sub-services>.service-items .service-heading h4:focus {
   color: var(--primary);
 }
+
+
+/* About Us Section */
+.about-icon-wrapper {
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: .8rem;
+  background-color: var(--extra-color);
+
+}

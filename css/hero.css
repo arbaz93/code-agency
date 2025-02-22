@@ -139,6 +139,7 @@
     --circle-size: clamp(20%, 60%, 100%);
 }
 .gradient-bg {
+    overflow: hidden;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -214,18 +215,18 @@
 
 @media screen and (max-width: 767px) {
 :root {
-    --circle-size: clamp(20%, 80%, 100%);
+    --circle-size: clamp(20%, 100%, 100%);
 }
 .gradient-bg .g1 {
-    top: calc(50% - var(--circle-size) / 2);
+    top: calc(50% - var(--circle-size) / 2 + 18vh);
     left: calc(50% - var(--circle-size) / 2);
 }
 .gradient-bg .g2 {
-    top: calc(50% - var(--circle-size) / 2 + 14vh);
+    top: calc(50% - var(--circle-size) / 2 + 32vh);
     left: calc(50% - var(--circle-size) / 2);
 }
 .gradient-bg .g3 {
-    top: calc(50% - var(--circle-size) / 2 + 16vh);
+    top: calc(50% - var(--circle-size) / 2 + 34vh);
     left: calc(50% - var(--circle-size) / 2 - 14vw);
 }
 

@@ -20,7 +20,7 @@ const dataSmall = document.querySelectorAll('[data-small]');
 document.addEventListener('scroll', (e) => handleNavigationOnScroll(e))
 
 function handleNavigationOnScroll(e) {
-    const yIsGreaterThanViewHeight = window.scrollY > window.innerHeight;
+    const yIsGreaterThanViewHeight = window.scrollY > window.innerHeight - 200;
 
     if(yIsGreaterThanViewHeight) {
         dataSmall.forEach(attr => attr.setAttribute('data-small', true))

@@ -22,7 +22,8 @@
 .hero-section {
     display: flex;
     justify-content: center;
-    min-height: 80vh;
+    min-height: calc(100dvh - 98px);
+    padding-top: 0
 }
 
 .hero-container {
@@ -73,8 +74,7 @@
 }
 
 .hero-center-content .hero-center2 h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1rem;
     margin: 0;
 }
 

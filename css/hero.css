@@ -192,6 +192,7 @@ body {
     align-items: center;
     gap: .4rem;
     position: relative;
+    font-weight: 600;
 }
 
 .hero-quote svg {

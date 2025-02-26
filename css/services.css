@@ -102,12 +102,13 @@ a {
     background-color: black;
     border-radius: var(--border-r);
     padding: 1.4rem;
+
 }
 
 .services-container .left-content .get-started p {
     font-size: calc(1.2rem + .25*((100vw - 576px) / 864));
 
-    font-weight: 600;
+    font-weight: 800;
     color: white;
 }
 

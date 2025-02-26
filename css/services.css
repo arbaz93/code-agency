@@ -262,10 +262,9 @@ a {
 
 
 .services-container .right-side .column .item .heading {
-    letter-spacing: -.03em;
     line-height: 1.2;
-    font-size: -webkit-calc(1.4rem + .25*((100vw - 576px) / 864));
-    font-size: calc(1.4rem + .25*((100vw - 576px) / 864));
+    font-size: -webkit-calc(2rem + .25*((100vw - 576px) / 864));
+    font-size: calc(2rem + .25*((100vw - 576px) / 864));
 }
 
 .services-container .right-side .column .item p {

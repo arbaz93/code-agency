@@ -337,7 +337,10 @@ a {
         .services-container {
             gap: 1rem;
         }
-
+        .services-container .left-content .text-content h4 {
+            font-size: calc(3rem + .25*((100vw - 576px) / 864));
+        }
+        
         .services-container .left-content .get-started {
             padding: 1.2rem;
             justify-content: space-between;
@@ -380,4 +383,26 @@ a {
 
         }
     }
+}
+@media (max-width: 368px) {
+
+    .services-container .left-content .get-started {
+        padding: 1rem;
+    
+    }
+    
+    .services-container .left-content .get-started p {
+        font-size: calc(1rem + .25*((100vw - 576px) / 864));
+    }
+    
+    .services-container .left-content .get-started a p {
+        font-size: .8rem;
+    }
+    
+    .services-container .left-content .get-started a svg {
+        width: .8rem;
+        transform: rotate(90deg);
+        fill: white;
+    }
+    
 }

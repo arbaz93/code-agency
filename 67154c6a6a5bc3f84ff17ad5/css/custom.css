@@ -97,17 +97,18 @@ body {
   transform: rotate(-180deg);
 }
 .sub-services {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 150px;
   left: 0;
-  border-radius: 16px;
-  overflow-y: hidden;
+  overflow-y: auto;
   width: 100%;
   max-height: max-content;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 99;
   color: var(--heading);
 }
+
 
 .sub-services[data-small=true] {
   top: calc(100px + 1rem);
@@ -117,14 +118,13 @@ body {
   display: none;
 
 }
-
 .sub-services[data-show=true] {
   animation: fadeIn 200ms ease-in forwards;
 }
 
 @keyframes fadeIn {
   0% {
-    display: initial !important;
+    display: flex !important;
     opacity: 0;
     transform: translateY(-20px);
   }
@@ -136,14 +136,23 @@ body {
 
 .sub-services>.service-items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-columns: repeat(3, max-content);
   gap: 1rem;
 
-  padding: 1rem;
-  justify-content: center;
+  padding: 2rem;
+  min-width: 720px;
+  aspect-ratio: 16 / 9;
+  justify-content: space-evenly;
   background-color: var(--extra-color);
-}
 
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (max-height: 685px) {
+  .sub-services>.service-items {
+    min-width: 100%;
+  } 
+}
 .sub-services>.service-items .items {
   display: flex;
   flex-direction: column;

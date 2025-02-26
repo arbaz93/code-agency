@@ -3925,6 +3925,7 @@ blockquote {
   padding: 1rem 0;
 
 }
+
 .site-logo[data-small=true] {
   width: 30px;
 }
@@ -7736,11 +7737,25 @@ blockquote {
   position: sticky;
   top: 0;
   transition: background-color 400ms ease-in;
+  animation-name: fullColor;
+  animation-duration: 1ms;
+  /* Firefox requires this to apply the animation */
+  animation-direction: alternate;
+  animation-timeline: scroll();
+  animation-range: 0 100vh;
 }
+
 .navbar[data-small=true] {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 15px 40px 0 var(--box-shadow);
+}
 
+@keyframes fullColor {
+  to {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 15px 40px 0 var(--box-shadow);
+
+  }
 }
 
 ._20px-text-white {
@@ -9759,9 +9774,11 @@ blockquote {
     max-width: 100%;
     padding-block: 1rem;
   }
+
   .site-logo {
     padding: 0;
   }
+
   ._30px-text-white {
     font-size: 28px;
     line-height: 140%
@@ -10564,6 +10581,7 @@ blockquote {
 .primary-text {
   color: var(--primary);
 }
+
 .pluspx {
   max-width: 30px;
 }
@@ -10571,15 +10589,19 @@ blockquote {
 .f-column {
   flex-direction: column !important;
 }
+
 .m-in-auto {
   margin: 0 auto
 }
+
 .p-in-0 {
   padding-inline: 0 !important;
 }
+
 .m-in-0 {
   margin-inline: 0 !important;
 }
+
 .w-100 {
   width: 100%;
 }
